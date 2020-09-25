@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CodeCircle Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pageContainer">
+        <header>
+            <div class="headerContent">
+                <h1 id="title">CODECIRCLE</h1>
+                <p id="description">Thank you for taking this survey</p>
+            </div>
+        </header>
+        <form id="survey-form">
+            <div class="form-data">
+                <label for="name" class="form-label" id="name-label">Name</label>
+                <input type="text" id="name" class="form-input" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-data">
+                <label for="username" class="form-label" id="username-label">Group Username</label>
+                <input type="text" id="username" class="form-input" name="username" placeholder="Your Group Username">
+            </div>
+
+            <div class="form-data">
+                <label for="email" class="form-label" id="email-label">Email</label>
+                <input type="email" id="email" class="form-input" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-data">
+                <label for="twitter-link" class="form-label" id="twitter-label">Twitter Link</label>
+                <input type="url" id="twitter-link" class="form-input" name="twitter-link" placeholder="Your Twitter Link">
+            </div>
+
+            <div class="form-data">
+                <label for="age" class="form-label" id="number-label">Age</label>
+                <input type="number" id="number" class="form-input" name="age" placeholder="Your Age" min="13" max="50">
+            </div>
+
+            <div class="form-data">
+                <label for="githubLink" class="form-label" id="github-label">Github Link</label>
+                <input type="url" id="github-link" class="form-input" name="github-link" placeholder="Your Github Link">
+            </div>
+
+            <div class="form-data">
+                <label for="linkedin-link" class="form-label" id="linkedin-label">Linkedin Link</label>
+                <input type="url" id="linkedin-link" class="form-input" name="linkedin-link" placeholder="Your Linkedin Link">
+            </div>
+
+            <div class="form-data">
+                <label for="track" class="form-label">Track/Role</label>
+                <div class="track-cont form-input">
+                    <input list="track" type="text">
+                    <datalist id="dropdown">
+                        <option value="Front-end developer">Front-end developer</option>
+                        <option value="Back-end developer">Back-end developer</option>
+                        <option value="UI/UX designer">UI/UX designer</option>
+                        <option value="Data scientist">Data scientist</option>
+                        <option value="Software Engineer/Developer">Software Engineer/Developer</option>
+                        <option value="Digital Marketer">Digital Marketer</option>
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="form-data group-relevance-cont">
+                <label id="group-relevance-label" class="form-label">Has the group helped you?</label>
+                <div class="form-input">
+                    <label id="yes-label">
+                        <input type="radio" class="group-relevance" name="group-relevance" value="Yes" checked/>Yes
+                    </label>
+                    <label id="no-label">
+                        <input type="radio" class="group-relevance" name="group-relevance" value="No"/>No
+                    </label>
+                    <label id="maybe-label">
+                        <input type="radio" class="group-relevance" name="group-relevance" value="Maybe"/>Maybe
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-data">
+                <label class="form-label">What are the things you like about the group?</label>
+                <div class="groupAdvantageCont form-input">
+                    <input id="opportunities" type="checkbox" name="GroupAdvantage" value="opportunities">
+                    <label for="team">Opportunities</label>
+                    <input id="togetherness" type="checkbox" name="GroupAdvantage" value="togetherness">
+                    <label for="togetherness">Togetherness</label>
+                    <input id="giveaway" type="checkbox" name="GroupAdvantage" value="giveaway">
+                    <label for="giveaway">Giveaway</label>
+                    <input id="everything" type="checkbox" name="GroupAdvantage" value="everything">
+                    <label for="everything">Everything</label>
+                </div>
+            </div>
+
+            <div class="form-data">
+                <label id="group-improvement-label" class="form-label">Suggestions on how the group can be improved?</label>
+                <textarea id="group-improvement" class="form-input" name="group-improvement"></textarea>
+            </div>
+
+            <div class="form-data">
+                <label id="comment-label" class="form-label">Comments</label>
+                <textarea id="comment" class="form-input" name="comment"></textarea>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

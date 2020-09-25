@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <nav id="nav-bar" role="navigation">
+        <header id="main-header">
+            <h1>CSS Documentation</h1>
+        </header>
+        <a class="nav-link" href="#prerequisites">Prerequisites</a>
+        <a class="nav-link" href="#basics">The Basics</a>
+        <a class="nav-link" href="#styling_text">Styling text</a>
+        <a class="nav-link" href="#positioning_layout">Positioning and Layout</a>
+        <a class="nav-link" href="#transitions_transforms">Transitions &Transforms</a>
+        <a class="nav-link" href="#filters">Filters</a>
+        <a class="nav-link" href="#references">References</a>
+    </nav>
+    <main id="main-doc">
+        <section id="prerequisites" class="main-section">
+            <header>
+                <h2>Prerequisites</h2>
+                <ul>
+                    <li>Familiarity with <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">html</a></li>
+                    <li>Text editor; <a href="https://code.visualstudio.com/">VS Code</a>, <a href="https://atom.io/">Atom</a>, <a href="https://codepen.io/">Codepen</a> e.t.c</li>
+                    <li>Web browser</li>
+                </ul>
+            </header>
+        </section>
+        <section id="basics" class="main-section">
+            <header>
+                <h2>The Basics</h2>
+                <h3>What is CSS</h3>
+                <p>CSS (Cascading Stylls Sheets) specify how an html document should be displayed; the look and feel of an html document.</p>
+                <p>It allows you to apply specific styles to specific elements.</p>
+                
+                <h3>Applying CSS</h3>
+                <h4>General syntax for applying css:</h4>
+            </header>
+<pre>
+    <code>selector{</code>
+        <code>property: value;</code>
+    <code>}</code>
+</pre>
+                <p>There are three ways to apply css to an html documennt</p>
+                <ul>
+                    <li>Inline CSS: Applying styles directly into html elements using style attribute.
+                        <h4>Example:</h4>
+<pre>
+    <code>&lt;p style="color: #808080; font-size: 18px"&gt;I am a developer&lt;/p&gt;</code>
+</pre>
+                    </li>
+                    <li>Internal CSS: Applying styles using style element.
+                        <h4>Example:</h4>&lt;&gt;
+<pre>
+    <code>&lt;style&gt;</code>
+        <code>p{</code>
+            <code>color: #808080&#59;</code>
+            <code>font-size: 18px;</code>
+        <code>}</code>
+    <code>&lt;/style&gt;</code>
+</pre>
+                    </li>
+                    <li>External CSS: is a seperate file for css linked to an html webpage with a css file extension placed in the head tag.
+                        <h4>Example:</h4>
+<pre>
+    <code>&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</code>
+</pre>
+                    </li>
+                </ul>
+
+                <h3>Selectors</h3>
+                <p>It defines the element to apply css style to</p>
+                <ul>
+                    <li>Universal selector: selects all elements, although it can be limited to a specific namespace
+                        <h4>Syntax: *</h4>
+                    </li>
+                    <li>Type selector: selects all elements that have a given node name (tags, attributes, text, comments)
+                        <h4>Syntax: elementName</h4>
+                    </li>
+                    <li>Class selector: selects all elements with a given class attribute.
+                        <h4>Syntax: .className</h4>
+                    </li>
+                    <li>ID selector: selects all elements with a given id attribute.
+                        <h4>Syntax: #idName</h4>
+                    <li>Attribute selector: Selects all elements that have the given attribute.
+                        <h4>Syntax: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</h4>
+                    </li>
+                    <li><a href="file:///D:/freecodecamp%20projects/technicalDocumentation/cssDocumentation.html#building_blocks">More Selectors</a></li>
+                </ul>
+                <h3>Style Cascade & Inheritance</h3>
+                <p>Cascade: is when styles fall from one style sheet to another, enabling multiple style sheets to be used on one HTML document.</p>
+                <ul>
+                    <li>The stylesheet created by the author of the page</li>
+                    <li>The browser's default styles</li>
+                    <li>Styles specified by the user</li>
+                </ul>
+                <p>Inheritance: It refers to the way properties flow through the page. Unless otherwise defined, a child element will usually take on the characteristics of the parent element.</p>
+                <h3>Comments</h3>
+                <p>Comments are used to explain code, write notes to yourself or another developer. They are ignored by the browser.</p>
+                <h4>Syntax:</h4>
+                <code>&lt;!--Some text here--&gt;</code>
+        </section>
+        <section id="styling_text" class="main-section">
+            <header>
+                <h2>Styling text</h2>
+                <p></p>
+            </header>
+        </section>
+        <section id="positioning_layout" class="main-section">
+            <header>
+                <h2>CSS Positioning and Layout</h2>
+                <p></p>
+            </header>
+        </section>
+        <section id="transitions_transforms_filters" class="main-section">
+            <header>
+                <h2>Transitions, Transforms</h2>
+                <p></p>
+            </header>
+        </section>
+        <section id="filters" class="main-section">
+            <header>
+                <h2>Filters</h2>
+                <p></p>
+            </header>
+        </section>
+        <section id="references" class="main-section">
+            <header>
+                <h2>References</h2>
+                <p></p>
+            </header>
+        </section>
+        
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Basics Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&family=Galada&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+    <nav id="navbar" role="navigation">
+        <header id="main-header">
+            <h1>CSS Basics Documentation</h1>
+        </header>
+        <div id="nav-link-container">
+            <a class="nav-link" href="#prerequisites">Prerequisites</a>
+            <a class="nav-link" href="#css_definition">CSS Definition</a>
+            <a class="nav-link" href="#applying_css">Applying CSS</a>
+            <a class="nav-link" href="#cascade_&_inheritance">Cascade & Inheritance</a>
+            <a class="nav-link" href="#comments">Comments</a>
+            <a class="nav-link" href="#styling_text">Styling Text</a>
+            <a class="nav-link" href="#references">References</a>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section id="prerequisites" class="main-section">
+            <header>Prerequisites</header>
+            <ul>
+                <li>Familiarity with <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">html</a></li>
+                <li>Text editor; <a href="https://code.visualstudio.com/">VS Code</a>, <a href="https://atom.io/">Atom</a>, <a href="https://codepen.io/">Codepen</a> e.t.c</li>
+                <li>Web browser</li>
+            </ul>
+        </section>
+        <section id="css_definition" class="main-section">
+            <header>CSS Definition</header>
+            <p>CSS (Cascading Style Sheets) specify how an html document should be displayed; the look and feel of an html document.</p>
+            <p>It allows you to apply specific styles to specific elements.</p>
+        </section>
+        <section id="applying_css" class="main-section">
+            <header>Applying CSS</header>
+            <h4>Syntax for applying css:</h4>
+<pre>
+    <code>selector{</code>
+        <code>property: value;</code>
+    <code>}</code>
+</pre>
+                            <p>There are three ways to apply css to an html documennt</p>
+                            <ul>
+                                <li>Inline CSS: Applying styles directly into html elements using style attribute.
+                                    <h4>Example:</h4>
+<pre>
+    <code>&lt;p style="color: #808080; font-size: 18px"&gt;I am a developer&lt;/p&gt;</code>
+</pre>
+                                </li>
+                                <li>Internal CSS: Applying styles using style element.
+                        <h4>Example:</h4>
+<pre>
+    <code>&lt;style&gt;</code>
+        <code>p{</code>
+            <code>color: #808080&#59;</code>
+            <code>font-size: 18px;</code>
+        <code>}</code>
+    <code>&lt;/style&gt;</code>
+</pre>
+                                </li>
+                                <li>External CSS: is a seperate file for css linked to an html webpage with a css file extension placed in the head tag.
+                                    <h4>Example:</h4>
+<pre>
+    <code>&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</code>
+</pre>              
+                                </li>
+                            </ul>
+            <h2>Selectors</h2>  
+            <p>It defines the element to apply css style to</p>
+            <ul>
+                <li>Universal selector: selects all elements, although it can be limited to a specific namespace
+                    <h4>Syntax: *</h4>
+                </li>
+                <li>Type selector: selects all elements that have a given node name (tags, attributes, text, comments)
+                </li>
+                <li>Class selector: selects all elements with a given class attribute.
+                </li>
+                <li>ID selector: selects all elements with a given id attribute.
+                <li>Attribute selector: Selects all elements that have the given attribute.</li>
+                <li><a href="file:///D:/freecodecamp%20projects/technicalDocumentation/cssDocumentation.html#building_blocks">MoreSelectors</a></li>
+                <h4>Syntax:</h4>
+<pre>
+    <code>elementName{</code>
+    <code>property: value;</code>
+    <code>}</code>
+    <code>.className{</code>
+    <code>property: value;</code>
+    <code>}</code>
+    <code>#idName{</code>
+    <code>property: value;</code>
+    <code>}</code>
+    <code>[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]{</code>
+    <code>property: value;</code>
+    <code>}</code>
+</pre>
+            </ul>
+        </section>
+        <section id="cascade_&_inheritance" class="main-section">
+            <header>Cascade & Inheritance</header>
+            <h3>Cascade</h3>
+            <p>It is when styles fall from one style sheet to another, enabling multiple style sheets to be used on one HTML document.</p>
+            <ul>
+                <li>The stylesheet created by the author of the page</li>
+                <li>The browser's default styles</li>
+                <li>Styles specified by the user</li>
+            </ul>
+            <h3>Inheritance</h3>
+            <p>It refers to the way properties flow through the page. Unless otherwise defined, a child element will usually take on the characteristics of the parent element.</p>
+        </section>
+        <section id="comments" class="main-section">
+            <header>Comments</header>
+            <p>Comments are used to explain code, write notes to yourself or another developer. They are ignored by the browser.</p>
+            <h4>Syntax:</h4>
+<pre><code>&lt;!--Some text here; it can be code, thoughts or explanation about the code--&gt;</code></pre>
+        </section>
+        <section id="styling_text" class="main-section">
+            <header>Styling text</header>
+            <ul>
+                <li>
+                    <h3>Font-family Property</h3>
+                    <p>It specifies the font name of an element and can hold several font names as a fallback system (when the browser does not support the first, it tries the next)</p>
+                    <p>There are two types of font-family property; </p>
+                    <ul>
+                        <li>generic-name: is the name of a genric family, like serif, sans-serif, monospace, cursive, fantasy</li>
+                        <li>family-name: is the name of a font-family, like times, helvatica, verdana</li>
+                    </ul>
+                    <h4>Example:</h4>
+<pre class="html-code">
+    <code>&lt;p id="first-paragraph"&gt;This is the first paragraph&lt;/p&gt;</code>
+    <code></code>
+    <code>&lt;p id="second-paragraph"&gt;This is the second paragraph&lt;/p&gt;</code>
+</pre>
+<pre class="css-code">
+    <code>#first-paragraph{</code>
+        <code>font-family: 'Galada', cursive;</code>
+    <code>}</code>
+    <code>#second-paragraph{</code>
+        <code>font-family: monospace;</code>
+    <code>}</code>
+</pre>
+                    
+                    <div class="code-output-container">
+                        <p id="galada-paragraph" class="code-output">This is the first paragraph</p>
+                        <p id="monospace-paragraph" class="code-output">This is the second paragraph</p>
+                    </div>
+                    <p>You can import custom web fonts in your website by copying the font's URL and pasting it in a link tag, in your head element before using the font in your css.</p>
+<pre><code>&lt;link href="https://fonts.googleapis.com/css?family=Verdana" rel="stylesheet" type="text/css"&gt;</code></pre>
+                    <h4>Note: </h4>
+                    <p>End font-family with a generic-name as a fallback if the one stated earlier is not available.<br>
+                    generic-name must not be in quotes.<br>
+                    Seperate each font-family value with a comma.<br>
+                    A font-name with white space must be quoted. 
+                    </p>
+<pre>
+    <code></code>
+    <code></code>
+</pre>
+                </li>
+                <li>
+                    <h3>Font-size</h3>
+                    <p>Specifies the size of a font. We have relative and absolute font-sizes.</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li>Keyword: xx-small, small, medium, large, larger.</li>
+                        <li>Numericals values in length units (px, cm, pt, em, rem, vh, vw) or percentages</li>
+                        <li>Initial</li>
+                        <li>Inherit</li>
+                        <li>Unset</li>
+                    </ul>
+                    <h4>Note:</h4>
+                    <p>When you use keywords as font-size, the user will be unable to increase the font-size. <br>
+                    It is a best practice to use values that are relative to the user's default font size.</p>
+                </li>
+                <li>
+                    <h3>Font-style</h3>
+                    <p>Specifies a text font style</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li>Normal: which is the default style displays a norml font style.</li>
+                        <li>Italic: displays text in italics</li>
+                        <li>oblique: displays an oblique font style</li>
+                        <li>initial: specifies default value</li>
+                        <li>inherit: Inherits font-style from its parent element</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Font-weight</h3>
+                    <p>Specifies the boldness or thickness of the text.</p>
+                    <h4>Values</h4>
+                    <ul>
+                        <li>normal</li>
+                        <li>bold</li>
+                        <li>bolder</li>
+                        <li>lighter</li>
+                        <li>Number values from 100(thin) to 900(thick)</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Font-variant</h3>
+                    <p>Is used to specify if text should be displayed in a small caps font.</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li>normal</li>
+                        <li>small-caps</li>
+                        <li>inherit</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Color</h3>
+                    <p>Specifies the color of a text</p>
+                    <h4>Values</h4>
+                    <ul>
+                        <li>Color keyword, like green, blue, red, white, transparent</li>
+                        <li>Hexcode(#RRGGBB[AA]) which can have 6 or 3 values from 0-F </li>
+                        <li>rgb() which is a color model that represents values as a mixture of three components; red, green and blue. Each color is between 0 to 255 e.g rgb(0, 0, 255)</li>
+                        <li>rgba</li>
+                        <li>hsl(): H(hue)- is an angle from 0 to 360 in deg, rad, grad or turn as unit. E.g red=0deg, grren=120deg, blue=240deg<br>
+                            S(saturation) and L(lightness)- are in percentages form 0% to 100%.
+                        </li>
+                        <li>hsla()</li>
+                    </ul>
+                    <p>Note: R- Red, G-Green, B-Blue, A-Alpha<br>
+                        A(A) is for opacity and is optional with a value from 0(0%) to 1(100%)
+                    </p>
+                </li>
+                <li>
+                    <h3>Aligning text</h3>
+                    <p>You can align text horizontally or vertically.</p>
+                    <h4>Text-align property (horizontal align) values:</h4>
+                    <ul>
+                        <li>left</li>
+                        <li>right</li>
+                        <li>center</li>
+                        <li>justify</li>
+                    </ul>
+                    <h4>Aligning text vertically values:</h4>
+                    <ul>
+                        <li>top</li>
+                        <li>middle</li>
+                        <li>bottom</li>
+                        <li>baseline</li>
+                        <li>sub</li>
+                        <li>super</li>
+                        <li>percentages(%)</li>
+                        <li>length(px, pt, cm)</li>
+                    </ul>
+                    <p>Note: To use vertical-align on block elements, you have to change the display of the element to table cell or inline-table</p>
+                </li>
+                <li>
+                    <h3>Text-decoration</h3>
+                    <p>Specifies how the text will be decorated. It is the shorthand for; text-decoration-line text-decoration-color text-decoration-style</p>
+                    <h4>Property/Values:</h4>
+                    <ul>
+                        <li>text-decoration-line:	Sets the kind of text decoration to use (like underline, overline, line-through)</li>
+                        <li>text-decoration-line:	Sets the kind of text decoration to use (like underline, overline, line-through)</li>
+                        <li>text-decoration-style	Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)</li>
+                        <li>none</li>
+                        <li>inherit</li>
+                        <li>initial</li>
+                    </ul>
+                    <p>Note: Text-decoration-line is required but the rest is optional.</p>
+                </li>
+                <li>
+                    <h3>Indenting text</h3>
+                    <p>Specifies the length of horizontal space before the beginning of a text block.</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li> length (px, pt, cm, em, etc.)</li>
+                        <li>Percentage(%)</li>
+                        <li>inherit</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Text-shadow</h3>
+                    <p>Adds shadow to a text, it accepts comma seperated list of shadows to a text.</p>
+                    <h4>Syntax:</h4>
+                    <code>text-shadow: x(offset) y(offset) blur-radius color</code>
+                    <p>Note: x offset, y offset and blur-radius have a unit in px</p>
+                </li>
+                <li>
+                    <h3>Text-transform</h3>
+                    <p>Specifies how to capitalize an element's text</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li>capitalize</li>
+                        <li>uppercase</li>
+                        <li>lowercase</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Letter-spacing</h3>
+                    <p>Specifies the space between characters in a text</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li>normal</li>
+                        <li>inherit</li>
+                        <li>length(px, pt, cm, mm, etc.)</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Word-spacing</h3>
+                    <p>Specifies the space between words in a text.</p>
+                    <h4>Accepts same value as letter-spacing.</h4>
+                </li>
+                <li>
+                    <h3>White-spacing</h3>
+                    <p>Specifies how white-space inside an element is handled</p>
+                    <h4>Values:</h4>
+                    <ul>
+                        <li>normal</li>
+                        <li>inherit</li>
+                        <li>pre: will only wrap text on line breaks and white space</li>
+                        <li>pre-line: will wrap text where there is a break in code, but extra white space is still ignored</li>
+                        <li>pre-wrap: will wrap text when necessary, and on line breaks</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Line-height</h3>
+                    <p>Specifies the line height of an element</p>
+                    <h4></h4>
+                    <ul>
+                        <li>normal</li>
+                        <li>number</li>
+                        <li>length(px, pt, cm, etc.)</li>
+                        <li>percentages(%)</li>
+                        <li>initial</li>
+                        <li>inherit</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="references" class="main-section">
+            <header>References</header>
+            <ul>
+                <li><a href="https://www.sololearn.com/Play/CSS" target="_blank">Sololearn</a</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">MDN (Mozilla Devloper Network)</a></li>
+                <li><a href="https://www.w3schools.com/css/" target="_blank">W3schools</a></li>
+                <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/basic-css/" target="_blank">Freecodecamp</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
